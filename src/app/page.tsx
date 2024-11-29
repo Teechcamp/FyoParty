@@ -1,12 +1,13 @@
 'use client'
-import React from 'react'
-import GradientLayout from '@/layouts/GradientLayout'
+import MainSection from '@/sections/MainSection'
+import ScheduleSection from '@/sections/ScheduleSection'
 
 const page = () => {
   return (
-    <GradientLayout>
-      <h1 className="font-playfair-display">Hola mundo</h1>
-    </GradientLayout>
+    <>
+      <MainSection />
+      <ScheduleSection />
+    </>
   )
 }
 

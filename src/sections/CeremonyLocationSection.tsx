@@ -7,12 +7,12 @@ const url = "https://maps.app.goo.gl/1eXdyrMsrtvtoqcYA";
 const CeremonyLocationSection = () => {
   return (
     <GradientLayout invert={false}>
-      <section>
+      <section className="w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
         <CardPresentation
           img="assets/modulo3.svg"
           title="Ceremonia Religiosa"
           variant="secondary"
-          height="h-[650px]"
+          height="h-[calc(100vh-24px)]"
         >
           <section className="pt-[30px]">
             <div>

@@ -31,7 +31,7 @@ const CardPresentation = ({
         };
 
   return (
-    <article className={`${stylesCard.bg} rounded-[8px] ${height} relative`}>
+    <article className={`${stylesCard.bg} rounded-[8px] ${height} relative w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto`}>
       <header className={`rounded-t-[8px] ${stylesCard.bgHeader} h-[180px] relative flex justify-center`}>
         <Image
           className="absolute bottom-0"

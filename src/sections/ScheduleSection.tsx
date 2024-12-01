@@ -30,7 +30,6 @@ function calculateTimeLeft() {
   return newTimeLeft;
 }
 
-
 const ScheduleSection = () => {
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
@@ -52,10 +51,9 @@ const ScheduleSection = () => {
     return () => clearTimeout(timer);
   }, [timeLeft]);
 
-  
   return (
     <GradientLayout invert>
-      <section className="h-[100vh]">
+      <section className="h-[100vh] w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
         <div className="bg-pink-100 px-[28px] flex items-center h-[124px] mb-[24px]">
           <p className="font-playfair-display font-bold text-[12px] text-pink-900 text-center">
             Te invito a celebrar el inicio de una nueva etapa en mi vida, llena
@@ -67,32 +65,50 @@ const ScheduleSection = () => {
           img="assets/modulo2.svg"
           title="Faltan"
           variant="primary"
-          height="h-[500px]"
+          height="h-[calc(100vh-172px)]"
         >
           <section className="grid gap-[16px] pt-[30px]">
             <section className="flex justify-evenly">
               <div className="text-center w-[50px]">
-                <p className="font-playfair-display font-bold text-[40px] text-pink-700">{timeLeft.days.toString().padStart(2, "0")}</p>
-                <p className="font-playfair-display font-bold text-[16px] text-pink-700">Días</p>
+                <p className="font-playfair-display font-bold text-[40px] text-pink-700">
+                  {timeLeft.days.toString().padStart(2, "0")}
+                </p>
+                <p className="font-playfair-display font-bold text-[16px] text-pink-700">
+                  Días
+                </p>
               </div>
 
               <div className="text-center w-[50px]">
-                <p className="font-playfair-display font-bold text-[40px] text-pink-700">{timeLeft.hours.toString().padStart(2, "0")}</p>
-                <p className="font-playfair-display font-bold text-[16px] text-pink-700">Hrs</p>
+                <p className="font-playfair-display font-bold text-[40px] text-pink-700">
+                  {timeLeft.hours.toString().padStart(2, "0")}
+                </p>
+                <p className="font-playfair-display font-bold text-[16px] text-pink-700">
+                  Hrs
+                </p>
               </div>
 
               <div className="text-center w-[50px]">
-                <p className="font-playfair-display font-bold text-[40px] text-pink-700">{timeLeft.minutes.toString().padStart(2, "0")}</p>
-                <p className="font-playfair-display font-bold text-[16px] text-pink-700">Min</p>
+                <p className="font-playfair-display font-bold text-[40px] text-pink-700">
+                  {timeLeft.minutes.toString().padStart(2, "0")}
+                </p>
+                <p className="font-playfair-display font-bold text-[16px] text-pink-700">
+                  Min
+                </p>
               </div>
               <div className="text-center w-[50px]">
-                <p className="font-playfair-display font-bold text-[40px] text-pink-700">{timeLeft.seconds.toString().padStart(2, "0")}</p>
-                <p className="font-playfair-display font-bold text-[16px] text-pink-700">Seg</p>
+                <p className="font-playfair-display font-bold text-[40px] text-pink-700">
+                  {timeLeft.seconds.toString().padStart(2, "0")}
+                </p>
+                <p className="font-playfair-display font-bold text-[16px] text-pink-700">
+                  Seg
+                </p>
               </div>
             </section>
 
             <section>
-              <p className="font-nautigal font-normal text-[38px] text-pink-950 text-center">Para mis quince años</p>
+              <p className="font-nautigal font-normal text-[38px] text-pink-950 text-center">
+                Para mis quince años
+              </p>
             </section>
           </section>
         </CardPresentation>

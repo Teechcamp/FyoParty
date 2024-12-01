@@ -7,14 +7,31 @@ import CardPresentation from "@/components/CardPresentation/CardPresentation";
 const ProgramEventSection = () => {
   return (
     <GradientLayout invert={false}>
-      <section>
+      <section className="w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
         <CardPresentation
-          height="h-[650px]"
+          height="h-[calc(100vh-24px)]"
           img="assets/modulo5.svg"
           title="Programa"
           variant="secondary"
         >
-          <section>
+          <section className="relative">
+            <div>
+              <hr className="outline-none border-none w-[2px] h-[300px] bg-indigo-50 absolute left-[50%] top-[16px]"/>
+              {/* First step */}
+              <div className="h-[16px] w-[16px] rounded-full bg-indigo-400 absolute left-[calc(50%-8px)] top-[16px]"></div>
+              <div className="h-[16px] w-[16px] rounded-full bg-pink-400 absolute left-[calc(50%-8px)] top-[32px]"></div>
+              {/* Second step */}
+              <div className="h-[16px] w-[16px] rounded-full bg-indigo-400 absolute left-[calc(50%-8px)] top-[88px]"></div>
+              <div className="h-[16px] w-[16px] rounded-full bg-pink-400 absolute left-[calc(50%-8px)] top-[104px]"></div>
+              {/* Third step */}
+              <div className="h-[16px] w-[16px] rounded-full bg-indigo-400 absolute left-[calc(50%-8px)] top-[160px]"></div>
+              <div className="h-[16px] w-[16px] rounded-full bg-pink-400 absolute left-[calc(50%-8px)] top-[176px]"></div>
+              {/* Fourth step */}
+              <div className="h-[16px] w-[16px] rounded-full bg-indigo-400 absolute left-[calc(50%-8px)] top-[232px]"></div>
+              <div className="h-[16px] w-[16px] rounded-full bg-pink-400 absolute left-[calc(50%-8px)] top-[248px]"></div>
+              {/* Fifth step */}
+              <div className="h-[16px] w-[16px] rounded-full bg-indigo-400 absolute left-[calc(50%-8px)] top-[304px]"></div>
+            </div>
             <div className="flex justify-between h-[60px] relative">
               <div className="rounded-[4px] bg-indigo-50 w-[125px] h-[60px]">
                 <div className="bg-indigo-900 rounded-t-[4px] relative">

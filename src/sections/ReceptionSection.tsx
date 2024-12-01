@@ -7,9 +7,9 @@ const url = "https://maps.app.goo.gl/1eXdyrMsrtvtoqcYA";
 const ReceptionSection = () => {
   return (
     <GradientLayout invert>
-      <section>
+      <section className="w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
         <CardPresentation
-          height="h-[650px]"
+          height="h-[calc(100vh-24px)]"
           img="assets/modulo4.svg"
           title="Recepción"
           variant="primary"

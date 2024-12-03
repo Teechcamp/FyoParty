@@ -1,13 +1,22 @@
 "use client";
 import GradientLayout from "@/layouts/GradientLayout";
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import CardPresentation from "@/components/CardPresentation/CardPresentation";
 
 const ProgramEventSection = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
   return (
     <GradientLayout invert={false}>
-      <section className="w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
+      <motion.section
+        ref={sectionRef}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1 }}
+        className="w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+      >
         <CardPresentation
           height="h-[calc(100vh-24px)]"
           img="assets/modulo5.svg"
@@ -16,7 +25,7 @@ const ProgramEventSection = () => {
         >
           <section className="relative">
             <div>
-              <hr className="outline-none border-none w-[2px] h-[300px] bg-indigo-50 absolute left-[50%] top-[16px]"/>
+              <hr className="outline-none border-none w-[2px] h-[300px] bg-indigo-50 absolute left-[50%] top-[16px]" />
               {/* First step */}
               <div className="h-[16px] w-[16px] rounded-full bg-indigo-400 absolute left-[calc(50%-8px)] top-[16px]"></div>
               <div className="h-[16px] w-[16px] rounded-full bg-pink-400 absolute left-[calc(50%-8px)] top-[32px]"></div>
@@ -32,7 +41,7 @@ const ProgramEventSection = () => {
               {/* Fifth step */}
               <div className="h-[16px] w-[16px] rounded-full bg-indigo-400 absolute left-[calc(50%-8px)] top-[304px]"></div>
             </div>
-            <div className="flex justify-between h-[60px] relative">
+            <div className="flex justify-evenly h-[60px] relative">
               <div className="rounded-[4px] bg-indigo-50 w-[125px] h-[60px]">
                 <div className="bg-indigo-900 rounded-t-[4px] relative">
                   <div
@@ -72,7 +81,7 @@ const ProgramEventSection = () => {
               </div>
             </div>
 
-            <div className="flex justify-between h-[60px] relative mt-[16px]">
+            <div className="flex justify-evenly h-[60px] relative mt-[16px]">
               <div className="rounded-[4px] bg-indigo-50 w-[125px] h-[60px]">
                 <div className="bg-indigo-900 rounded-t-[4px] relative">
                   <div
@@ -112,7 +121,7 @@ const ProgramEventSection = () => {
               </div>
             </div>
 
-            <div className="flex justify-between h-[60px] relative mt-[16px]">
+            <div className="flex justify-evenly h-[60px] relative mt-[16px]">
               <div className="rounded-[4px] bg-indigo-50 w-[125px] h-[60px]">
                 <div className="bg-indigo-900 rounded-t-[4px] relative">
                   <div
@@ -152,7 +161,7 @@ const ProgramEventSection = () => {
               </div>
             </div>
 
-            <div className="flex justify-between h-[60px] relative mt-[16px]">
+            <div className="flex justify-evenly h-[60px] relative mt-[16px]">
               <div className="rounded-[4px] bg-indigo-50 w-[125px] h-[60px]">
                 <div className="bg-indigo-900 rounded-t-[4px] relative">
                   <div
@@ -192,7 +201,7 @@ const ProgramEventSection = () => {
               </div>
             </div>
 
-            <div className="flex justify-between h-[60px] relative mt-[16px]">
+            <div className="flex justify-evenly h-[60px] relative mt-[16px]">
               <div className="rounded-[4px] bg-indigo-50 w-[125px] h-[60px]">
                 <div className="bg-indigo-900 rounded-t-[4px] relative">
                   <div
@@ -214,7 +223,7 @@ const ProgramEventSection = () => {
             </div>
           </section>
         </CardPresentation>
-      </section>
+      </motion.section>
     </GradientLayout>
   );
 };

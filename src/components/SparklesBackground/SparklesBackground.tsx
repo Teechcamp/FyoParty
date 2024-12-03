@@ -1,9 +1,9 @@
 "use client"
 import { motion } from 'framer-motion'
 import { SparklesIcon } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 
-const SparklesBackground = () => {
+const SparklesBackground = memo(() => {
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
 
@@ -39,6 +39,6 @@ const SparklesBackground = () => {
         ))}
       </div>
   )
-}
+})
 
 export default SparklesBackground

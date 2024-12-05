@@ -3,7 +3,7 @@ import GradientLayout from "@/layouts/GradientLayout";
 import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 
-const url = "https://maps.app.goo.gl/1eXdyrMsrtvtoqcYA";
+const url = "https://maps.app.goo.gl/eXqo4LFfiqDjcSJVA?g_st=iw";
 
 const ReceptionSection = () => {
   const sectionRef = useRef(null);
@@ -26,14 +26,13 @@ const ReceptionSection = () => {
           <section className="pt-[30px]">
             <div>
               <p className="font-playfair-display font-bold text-[24px] text-pink-700 text-center lg:text-[32px]">
-                Centro Evangelistico Maranatha
+                Salon de eventos Confort
               </p>
               <p className="font-playfair-display font-bold text-[50px] text-pink-700 text-center pt-[4px] pb-[16px] lg:text-[58px]">
                 7:00 P.M.
               </p>
               <p className="font-playfair-display font-bold text-[16px] text-pink-950 text-center lg:text-[24px]">
-                C. 18 53, Barrio de Sta Ana, 24010 San Francisco de Campeche,
-                Camp.
+                C. 13 #7, Yaldzib, 24560 Imí, Camp.
               </p>
             </div>
             <div className="text-center pt-[24px]">
